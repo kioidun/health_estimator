@@ -33,15 +33,15 @@ const displayData = (input) => {
   }
   const currentlyInfectedImpact = impactTotal * (2 ** parseInt(timetoElapse / 3, 10));
   const currentlyInfectedSevere = severeImpactTotal * (2 ** parseInt(timetoElapse / 3, 10));
-  const severeCasesByRequestedTimeImpact = Math.floor((15 / 100) * currentlyInfectedImpact);
+  const severeCasesByRequestedTimeImpact = Math.trunc((15 / 100) * currentlyInfectedImpact);
   const numberofhospitalbeds = Math.trunc(hospitalbeds * (35 / 100));
   const hospitalBedsByRequestedTimeImpact = numberofhospitalbeds - severeCasesByRequestedTimeImpact;
-  const casesForICUByRequestedTimeImpact = Math.floor((5 / 100) * currentlyInfectedImpact);
+  const casesForICUByRequestedTimeImpact = Math.trunc((5 / 100) * currentlyInfectedImpact);
   const casesForVentilatorsByRequestedTimeImpact = Math.floor((2 / 100) * currentlyInfectedImpact);
-  const severeCasesByRequestedTimeSevere = Math.floor((15 / 100) * currentlyInfectedSevere);
+  const severeCasesByRequestedTimeSevere = Math.trunc((15 / 100) * currentlyInfectedSevere);
   const hospitalBedsByRequestedTimeSevere = numberofhospitalbeds - severeCasesByRequestedTimeSevere;
-  const casesForICUByRequestedTimeSevere = Math.floor((5 / 100) * currentlyInfectedSevere);
-  const casesForVentilatorsByRequestedTimeSevere = Math.floor((2 / 100) * currentlyInfectedSevere);
+  const casesForICUByRequestedTimeSevere = Math.trunc((5 / 100) * currentlyInfectedSevere);
+  const casesForVentilatorsByRequestedTimeSevere = Math.trunc((2 / 100) * currentlyInfectedSevere);
   const dollarsInFlightImpact = Math.trunc((currentlyInfectedImpact
     * averageDailyIncomePopulation * averageDailyIncome) / timetoElapse);
   const dollarsInFlightSevere = Math.trunc((currentlyInfectedSevere
