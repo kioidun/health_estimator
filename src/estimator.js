@@ -31,8 +31,8 @@ const displayData = (input) => {
   } else if (input.periodType === 'weeks') {
     timetoElapse = input.timeToElapse * 7;
   }
-  const currentlyInfectedImpact = impactTotal * (2 ** Math.trunc(timetoElapse / 3));
-  const currentlyInfectedSevere = severeImpactTotal * (2 ** Math.trunc(timetoElapse / 3));
+  const currentlyInfectedImpact = Math.trunc(impactTotal * (2 ** (timetoElapse / 3)));
+  const currentlyInfectedSevere = Math.trunc(severeImpactTotal * (2 ** (timetoElapse / 3)));
   const severeCasesByRequestedTimeImpact = Math.trunc((15 / 100) * currentlyInfectedImpact);
   const numberofhospitalbeds = Math.trunc(hospitalbeds * (35 / 100));
   const hospitalBedsByRequestedTimeImpact = numberofhospitalbeds - severeCasesByRequestedTimeImpact;
@@ -64,7 +64,7 @@ const displayData = (input) => {
 };
 const covid19ImpactEstimator = (data) => {
   // eslint-disable-next-line no-param-reassign
-//   data = calculateDataInput(2747, 38, 'days', 678874, 4, 0.73);
+  // data = calculateDataInput(2747, 38, 'days', 678874, 4, 0.73);
   displayData(data);
   const result = { data, impact, severeImpact };
   return result;
