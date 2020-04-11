@@ -57,11 +57,11 @@ const displayData = (input) => {
   };
   return estimate;
 };
-const covid19ImpactEstimator = () => {
+const covid19ImpactEstimator = (data) => {
   const reportedCases = 2747;
   const timetoElapse = 28;
   const periodtype = 'days';
-  const data = calculateDataInput(reportedCases, timetoElapse, periodtype);
+  // const data = calculateDataInput(reportedCases, timetoElapse, periodtype);
   displayData(data);
 };
 
