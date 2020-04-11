@@ -31,8 +31,8 @@ const displayData = (input) => {
   } else if (input.periodType === 'weeks') {
     timetoElapse = input.timeToElapse * 7;
   }
-  const currentlyInfectedImpact = impactTotal * (2 ** parseInt(timetoElapse / 3, 10));
-  const currentlyInfectedSevere = severeImpactTotal * (2 ** parseInt(timetoElapse / 3, 10));
+  const currentlyInfectedImpact = impactTotal * (2 ** Math.trunc(timetoElapse / 3));
+  const currentlyInfectedSevere = severeImpactTotal * (2 ** Math.trunc(timetoElapse / 3));
   const severeCasesByRequestedTimeImpact = Math.trunc((15 / 100) * currentlyInfectedImpact);
   const numberofhospitalbeds = Math.trunc(hospitalbeds * (35 / 100));
   const hospitalBedsByRequestedTimeImpact = numberofhospitalbeds - severeCasesByRequestedTimeImpact;
