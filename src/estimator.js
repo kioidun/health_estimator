@@ -59,9 +59,5 @@ const displayData = (input) => {
 };
 const covid19ImpactEstimator = (data) => data;
 displayData(covid19ImpactEstimator.data);
-//   const reportedCases = 2747;
-//   const timetoElapse = 28;
-//   const periodtype = 'days';
-  // const data = calculateDataInput(reportedCases, timetoElapse, periodtype);
 
 export default covid19ImpactEstimator;
