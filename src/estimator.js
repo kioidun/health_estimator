@@ -1,19 +1,19 @@
-const calculateDataInput = (reportedCases, timetoElapse, periodtype) => {
-  const object = {
-    region: {
-      name: 'AFRICA',
-      avgAge: 27,
-      avgDailyIncomeUsed: 5,
-      avgDailyIncomePopulation: 0.71
-    },
-    periodType: periodtype,
-    timeToElapse: timetoElapse,
-    reportedCases,
-    population: 1000000,
-    totalHospitalBeds: 231
-  };
-  return object;
-};
+// const calculateDataInput = (reportedCases, timetoElapse, periodtype) => {
+//   const object = {
+//     region: {
+//       name: 'AFRICA',
+//       avgAge: 27,
+//       avgDailyIncomeUsed: 5,
+//       avgDailyIncomePopulation: 0.71
+//     },
+//     periodType: periodtype,
+//     timeToElapse: timetoElapse,
+//     reportedCases,
+//     population: 1000000,
+//     totalHospitalBeds: 231
+//   };
+//   return object;
+// };
 
 const displayData = (input) => {
   const impactTotal = input.reportedCases * 10;
