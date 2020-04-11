@@ -58,6 +58,6 @@ const displayData = (input) => {
   return estimate;
 };
 const covid19ImpactEstimator = (data) => data;
-displayData(covid19ImpactEstimator.data);
+displayData(covid19ImpactEstimator);
 
 export default covid19ImpactEstimator;
