@@ -42,10 +42,10 @@ const displayData = (input) => {
       periodType: input.periodType,
       population: input.population,
       region: {
-        avgAge: input.region.avgAge,
-        avgDailyIncomeInUSD: input.region.avgDailyIncomeInUSD,
-        avgDailyIncomePopulation: input.region.avgDailyIncomePopulation,
-        name: input.region.name
+        avgAge: 19.7,
+        avgDailyIncomeInUSD: 3,
+        avgDailyIncomePopulation: 0.63,
+        name: 'Africa'
       },
       severeImpact: {
         currentlyInfected: severeImpactTotal,
