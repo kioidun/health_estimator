@@ -57,13 +57,11 @@ const displayData = (input) => {
   };
   return estimate;
 };
-const covid19ImpactEstimator = (data) => {
+const covid19ImpactEstimator = (data) => data;
+displayData(covid19ImpactEstimator.data);
 //   const reportedCases = 2747;
 //   const timetoElapse = 28;
 //   const periodtype = 'days';
   // const data = calculateDataInput(reportedCases, timetoElapse, periodtype);
-  process.stdout.write('test trial', data);
-  displayData(data.data);
-};
 
-module.export = covid19ImpactEstimator();
+export default covid19ImpactEstimator;
