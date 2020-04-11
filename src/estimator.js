@@ -14,6 +14,8 @@
 //   };
 //   return object;
 // };
+const impact = {};
+const severeImpact = {};
 
 const displayData = (input) => {
   const impactTotal = input.reportedCases * 10;
@@ -35,27 +37,16 @@ const displayData = (input) => {
     currentlyInfectedSevere = severeImpactTotal * (2 ** parseInt(timetoElapse / 3, 10));
   }
 
-  const estimate = {
-    impact: {
-      currentlyInfected: impactTotal,
-      infectionsByRequestedTime: currentlyInfectedImpact,
-      periodType: input.periodType,
-      population: input.population,
-      region: {
-        avgAge: 19.7,
-        avgDailyIncomeInUSD: 3,
-        avgDailyIncomePopulation: 0.63,
-        name: 'Africa'
-      },
-      severeImpact: {
-        currentlyInfected: severeImpactTotal,
-        infectionsByRequestedTime: currentlyInfectedSevere
-      }
-    }
-  };
-  return estimate;
+  impact.currentlyInfected = impactTotal;
+  impact.infectionsByRequestedTime = currentlyInfectedImpact;
+  severeImpact.currentlyInfected = severeImpactTotal;
+  severeImpact.infectionsByRequestedTime = currentlyInfectedSevere;
 };
-const covid19ImpactEstimator = (data) => data;
-displayData(covid19ImpactEstimator);
+const covid19ImpactEstimator = (data) => {
+  displayData(data);
+  const result = { data, impact, severeImpact };
+  return result;
+};
+
 
 export default covid19ImpactEstimator;
