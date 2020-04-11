@@ -36,6 +36,7 @@ const displayData = (input) => {
   }
 
   const estimate = {
+    data: input,
     impact: {
       currentlyInfected: impactTotal,
       infectionsByRequestedTime: currentlyInfectedImpact,
