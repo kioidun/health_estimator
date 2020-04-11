@@ -39,21 +39,11 @@ const displayData = (input) => {
     data: input,
     impact: {
       currentlyInfected: impactTotal,
-      infectionsByRequestedTime: currentlyInfectedImpact,
-      severeCasesByRequestedTime: 16877568,
-      hospitalBedsByRequestedTime: -16877568,
-      casesForICUByRequestedTime: 5625856,
-      casesForVentilatorsByRequestedTime: 2250342,
-      dollarsInFlight: 12484
+      infectionsByRequestedTime: currentlyInfectedImpact
     },
     severeImpact: {
       currentlyInfected: severeImpactTotal,
-      infectionsByRequestedTime: currentlyInfectedSevere,
-      severeCasesByRequestedTime: 84387840,
-      hospitalBedsByRequestedTime: -84150234,
-      casesForICUByRequestedTime: 28129280,
-      casesForVentilatorsByRequestedTime: 11251712,
-      dollarsInFlight: 6244445556
+      infectionsByRequestedTime: currentlyInfectedSevere
     }
   };
   return estimate;
