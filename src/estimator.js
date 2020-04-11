@@ -62,6 +62,7 @@ const covid19ImpactEstimator = (data) => {
 //   const timetoElapse = 28;
 //   const periodtype = 'days';
   // const data = calculateDataInput(reportedCases, timetoElapse, periodtype);
+  console.log('yeah',data);
   displayData(data);
 };
 
