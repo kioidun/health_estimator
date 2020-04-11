@@ -21,21 +21,14 @@ const displayData = (input) => {
   const impactTotal = input.reportedCases * 10;
   const severeImpactTotal = input.reportedCases * 50;
   let timetoElapse = input.timeToElapse;
-  let currentlyInfectedImpact;
-  let currentlyInfectedSevere;
 
-  if (input.periodType === 'days') {
-    currentlyInfectedImpact = impactTotal * (2 ** parseInt(timetoElapse / 3, 10));
-    currentlyInfectedSevere = severeImpactTotal * (2 ** parseInt(timetoElapse / 3, 10));
-  } else if (input.periodType === 'months') {
+  if (input.periodType === 'months') {
     timetoElapse = input.timeToElapse * 30;
-    currentlyInfectedImpact = impactTotal * (2 ** parseInt(timetoElapse / 3, 10));
-    currentlyInfectedSevere = severeImpactTotal * (2 ** parseInt(timetoElapse / 3, 10));
   } else if (input.periodType === 'weeks') {
     timetoElapse = input.timeToElapse * 7;
-    currentlyInfectedImpact = impactTotal * (2 ** parseInt(timetoElapse / 3, 10));
-    currentlyInfectedSevere = severeImpactTotal * (2 ** parseInt(timetoElapse / 3, 10));
   }
+  const currentlyInfectedImpact = impactTotal * (2 ** parseInt(timetoElapse / 3, 10));
+  const currentlyInfectedSevere = severeImpactTotal * (2 ** parseInt(timetoElapse / 3, 10));
 
   impact.currentlyInfected = impactTotal;
   impact.infectionsByRequestedTime = currentlyInfectedImpact;
