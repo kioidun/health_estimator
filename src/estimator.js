@@ -27,7 +27,7 @@ const displayData = (input) => {
   if (input.periodType === 'days') {
     currentlyInfectedImpact = impactTotal * (2 ** parseInt(timetoElapse / 3, 10));
     currentlyInfectedSevere = severeImpactTotal * (2 ** parseInt(timetoElapse / 3, 10));
-  } else if (input.periodType === 'month') {
+  } else if (input.periodType === 'months') {
     timetoElapse = input.timeToElapse * 30;
     currentlyInfectedImpact = impactTotal * (2 ** parseInt(timetoElapse / 3, 10));
     currentlyInfectedSevere = severeImpactTotal * (2 ** parseInt(timetoElapse / 3, 10));
