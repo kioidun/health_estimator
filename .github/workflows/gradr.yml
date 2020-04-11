@@ -59,7 +59,7 @@ jobs:
         path: audits
 
     - name: Run Audits
-      run: npx jest audits/ch-1 --json --outputFile=audits/ch-1.json --noStackTrace
+      run: npx jest audits/ch-1 --json --outputFile=audits/ch-1.json 
 
     - name: Report Audits
       uses: BuildforSDG-Cohort1-Assessment/jest-out@v1
@@ -98,7 +98,7 @@ jobs:
         path: audits
 
     - name: Run Audits
-      run: npx jest audits/ch-2 --json --outputFile=audits/ch-2.json --noStackTrace
+      run: npx jest audits/ch-2 --json --outputFile=audits/ch-2.json
 
     - name: Report Audits
       uses: BuildforSDG-Cohort1-Assessment/jest-out@v1
@@ -214,7 +214,7 @@ jobs:
         path: audits
 
     - name: Run Audits
-      run: npx jest --config=audits/jest.config.js audits/ch-4 --json --outputFile=audits/ch-4.json --noStackTrace
+      run: npx jest --config=audits/jest.config.js audits/ch-4 --json --outputFile=audits/ch-4.json
 
     - name: Report Audits
       uses: BuildforSDG-Cohort1-Assessment/jest-out@v1
@@ -251,7 +251,7 @@ jobs:
         path: audits
 
     - name: Run Audits
-      run: npx jest --config=audits/jest.config.js audits/ch-5 --json --outputFile=audits/ch-5.json --noStackTrace
+      run: npx jest --config=audits/jest.config.js audits/ch-5 --json --outputFile=audits/ch-5.json
 
     - name: Report Audits
       uses: BuildforSDG-Cohort1-Assessment/jest-out@v1
