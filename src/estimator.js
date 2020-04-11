@@ -3,7 +3,7 @@
 //     region: {
 //       name: 'AFRICA',
 //       avgAge: 27,
-//       avgDailyIncomeUsed: 5,
+//       avgDailyIncomeInUSD: 5,
 //       avgDailyIncomePopulation: 0.71
 //     },
 //     periodType: periodtype,
@@ -36,14 +36,21 @@ const displayData = (input) => {
   }
 
   const estimate = {
-    data: input,
     impact: {
       currentlyInfected: impactTotal,
-      infectionsByRequestedTime: currentlyInfectedImpact
-    },
-    severeImpact: {
-      currentlyInfected: severeImpactTotal,
-      infectionsByRequestedTime: currentlyInfectedSevere
+      infectionsByRequestedTime: currentlyInfectedImpact,
+      periodType: input.periodType,
+      population: input.population,
+      region: {
+        avgAge: input.region.avgAge,
+        avgDailyIncomeInUSD: input.region.avgDailyIncomeInUSD,
+        avgDailyIncomePopulation: input.region.avgDailyIncomePopulation,
+        name: input.region.name
+      },
+      severeImpact: {
+        currentlyInfected: severeImpactTotal,
+        infectionsByRequestedTime: currentlyInfectedSevere
+      }
     }
   };
   return estimate;
