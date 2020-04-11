@@ -31,13 +31,13 @@ const displayData = (input) => {
   } else if (input.periodType === 'weeks') {
     timetoElapse = input.timeToElapse * 7;
   }
-  const currentlyInfectedImpact = Math.trunc(impactTotal * (2 ** (timetoElapse / 3)));
-  const currentlyInfectedSevere = Math.trunc(severeImpactTotal * (2 ** (timetoElapse / 3)));
+  const currentlyInfectedImpact = impactTotal * (2 ** Math.trunc(timetoElapse / 3));
+  const currentlyInfectedSevere = severeImpactTotal * (2 ** Math.trunc(timetoElapse / 3));
   const severeCasesByRequestedTimeImpact = Math.trunc((15 / 100) * currentlyInfectedImpact);
   const numberofhospitalbeds = Math.trunc(hospitalbeds * (35 / 100));
   const hospitalBedsByRequestedTimeImpact = numberofhospitalbeds - severeCasesByRequestedTimeImpact;
   const casesForICUByRequestedTimeImpact = Math.trunc((5 / 100) * currentlyInfectedImpact);
-  const casesForVentilatorsByRequestedTimeImpact = Math.floor((2 / 100) * currentlyInfectedImpact);
+  const casesForVentilatorsByRequestedTimeImpact = Math.trunk((2 / 100) * currentlyInfectedImpact);
   const severeCasesByRequestedTimeSevere = Math.trunc((15 / 100) * currentlyInfectedSevere);
   const hospitalBedsByRequestedTimeSevere = numberofhospitalbeds - severeCasesByRequestedTimeSevere;
   const casesForICUByRequestedTimeSevere = Math.trunc((5 / 100) * currentlyInfectedSevere);
