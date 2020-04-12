@@ -1,5 +1,5 @@
-// eslint-disable-next-line max-len
-// const calculateDataInput = (reportedCases, timetoElapse, periodtype, hospitalBeds, averageUsd, averagePopulation) => {
+// const calculateDataInput = (reportedCases, timetoElapse,
+// periodtype, hospitalBeds, averageUsd, averagePopulation) => {
 //   const object = {
 //     region: {
 //       name: 'AFRICA',
@@ -32,23 +32,16 @@ const displayData = (input) => {
     timetoElapse = input.timeToElapse * 7;
   }
   const currentlyInfectedImpact = impactTotal * (2 ** Math.trunc(timetoElapse / 3));
-  // console.log(currentlyInfectedImpact);
   const currentlyInfectedSevere = severeImpactTotal * (2 ** Math.trunc(timetoElapse / 3));
-  // console.log(currentlyInfectedSevere);
   const severeCasesByRequestedTimeImpact = (15 / 100) * currentlyInfectedImpact;
-  // console.log(severeCasesByRequestedTimeImpact);
   const numberofhospitalbeds = Math.trunc(hospitalbeds * (35 / 100));
-  // console.log(numberofhospitalbeds);
   const hospitalBedsByRequestedTimeImpact = numberofhospitalbeds
   - (severeCasesByRequestedTimeImpact - 1);
-  // console.log(hospitalBedsByRequestedTimeImpact);
   const casesForICUByRequestedTimeImpact = Math.trunc((5 / 100) * currentlyInfectedImpact);
   const casesForVentilatorsByRequestedTimeImpact = Math.trunc((2 / 100) * currentlyInfectedImpact);
   const severeCasesByRequestedTimeSevere = (15 / 100) * currentlyInfectedSevere;
-  // console.log(severeCasesByRequestedTimeSevere);
   const hospitalBedsByRequestedTimeSevere = numberofhospitalbeds
   - (severeCasesByRequestedTimeSevere - 1);
-  // console.log(hospitalBedsByRequestedTimeSevere);
   const casesForICUByRequestedTimeSevere = Math.trunc((5 / 100) * currentlyInfectedSevere);
   const casesForVentilatorsByRequestedTimeSevere = Math.trunc((2 / 100) * currentlyInfectedSevere);
   const dollarsInFlightImpact = Math.trunc((currentlyInfectedImpact
@@ -72,7 +65,6 @@ const displayData = (input) => {
   severeImpact.dollarsInFlight = dollarsInFlightSevere;
 };
 const covid19ImpactEstimator = (data) => {
-  // eslint-disable-next-line no-param-reassign
   // data = calculateDataInput(2747, 38, 'days', 678874, 4, 0.73);
   displayData(data);
   const result = { data, impact, severeImpact };
