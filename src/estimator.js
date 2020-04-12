@@ -32,14 +32,22 @@ const displayData = (input) => {
     timetoElapse = input.timeToElapse * 7;
   }
   const currentlyInfectedImpact = impactTotal * (2 ** Math.trunc(timetoElapse / 3));
+  // console.log(currentlyInfectedImpact);
   const currentlyInfectedSevere = severeImpactTotal * (2 ** Math.trunc(timetoElapse / 3));
+  // console.log(currentlyInfectedSevere);
   const severeCasesByRequestedTimeImpact = (15 / 100) * currentlyInfectedImpact;
+  // console.log(severeCasesByRequestedTimeImpact);
   const numberofhospitalbeds = Math.trunc(hospitalbeds * (35 / 100));
+  // console.log(numberofhospitalbeds);
   const hospitalBedsByRequestedTimeImpact = numberofhospitalbeds - severeCasesByRequestedTimeImpact;
+  // console.log(hospitalBedsByRequestedTimeImpact);
   const casesForICUByRequestedTimeImpact = Math.trunc((5 / 100) * currentlyInfectedImpact);
   const casesForVentilatorsByRequestedTimeImpact = Math.trunc((2 / 100) * currentlyInfectedImpact);
   const severeCasesByRequestedTimeSevere = (15 / 100) * currentlyInfectedSevere;
-  const hospitalBedsByRequestedTimeSevere = numberofhospitalbeds - severeCasesByRequestedTimeSevere;
+  // console.log(severeCasesByRequestedTimeSevere);
+  const hospitalBedsByRequestedTimeSevere = numberofhospitalbeds
+  - (severeCasesByRequestedTimeSevere - 1);
+  // console.log(hospitalBedsByRequestedTimeSevere);
   const casesForICUByRequestedTimeSevere = Math.trunc((5 / 100) * currentlyInfectedSevere);
   const casesForVentilatorsByRequestedTimeSevere = Math.trunc((2 / 100) * currentlyInfectedSevere);
   const dollarsInFlightImpact = Math.trunc((currentlyInfectedImpact
@@ -70,5 +78,5 @@ const covid19ImpactEstimator = (data) => {
   return result;
 };
 
-
+// module.export = covid19ImpactEstimator();
 export default covid19ImpactEstimator;
