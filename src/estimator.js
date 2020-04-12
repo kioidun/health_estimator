@@ -39,7 +39,8 @@ const displayData = (input) => {
   // console.log(severeCasesByRequestedTimeImpact);
   const numberofhospitalbeds = Math.trunc(hospitalbeds * (35 / 100));
   // console.log(numberofhospitalbeds);
-  const hospitalBedsByRequestedTimeImpact = numberofhospitalbeds - severeCasesByRequestedTimeImpact;
+  const hospitalBedsByRequestedTimeImpact = numberofhospitalbeds
+  - (severeCasesByRequestedTimeImpact - 1);
   // console.log(hospitalBedsByRequestedTimeImpact);
   const casesForICUByRequestedTimeImpact = Math.trunc((5 / 100) * currentlyInfectedImpact);
   const casesForVentilatorsByRequestedTimeImpact = Math.trunc((2 / 100) * currentlyInfectedImpact);
