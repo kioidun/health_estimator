@@ -15,6 +15,7 @@
 //   };
 //   return object;
 // };
+
 const impact = {};
 const severeImpact = {};
 
