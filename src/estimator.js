@@ -36,12 +36,12 @@ const displayData = (input) => {
   const severeCasesByRequestedTimeImpact = (15 / 100) * currentlyInfectedImpact;
   const numberofhospitalbeds = Math.trunc(hospitalbeds * (35 / 100));
   const hospitalBedsByRequestedTimeImpact = numberofhospitalbeds
-  - (severeCasesByRequestedTimeImpact - 1);
+  - severeCasesByRequestedTimeImpact;
   const casesForICUByRequestedTimeImpact = Math.trunc((5 / 100) * currentlyInfectedImpact);
   const casesForVentilatorsByRequestedTimeImpact = Math.trunc((2 / 100) * currentlyInfectedImpact);
   const severeCasesByRequestedTimeSevere = (15 / 100) * currentlyInfectedSevere;
   const hospitalBedsByRequestedTimeSevere = numberofhospitalbeds
-  - (severeCasesByRequestedTimeSevere - 1);
+  - severeCasesByRequestedTimeSevere;
   const casesForICUByRequestedTimeSevere = Math.trunc((5 / 100) * currentlyInfectedSevere);
   const casesForVentilatorsByRequestedTimeSevere = Math.trunc((2 / 100) * currentlyInfectedSevere);
   const dollarsInFlightImpact = Math.trunc((currentlyInfectedImpact
