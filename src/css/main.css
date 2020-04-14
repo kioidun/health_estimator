@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    color:#000;
+    line-height: 1.6;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    width:100%;
+    height:100%;
+
+    /* css smooth  scroll*/
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+.navbar{
+    position:fixed;
+    top:0;
+    z-index:1;
+    display:flex;
+    width:100%;
+    height:60px;
+    background: rgba(0,0,0,0.7);
+}
+.navbar ul{
+    display:flex;
+    list-style: none;
+    width: 100%;
+    justify-content: center;
+
+}
+.navbar ul li{
+    margin:0 1rem;
+    padding: 1rem;
+}
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color:#f4f4f4;
+
+}
+.navbar ul li a:hover{
+    color:yellow;
+}
+
+section{
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+width:100%;
+height: 100vh;
+scroll-snap-align: center;
+}
+section h1{
+font-size: 4rem;
+}
+
+section p{
+    font-size: 1.5rem;
+}
+section#home{
+    background: url('https://source.unsplash.com/bZZp1PmHI0E/1600*900') no-repeat center center/ cover;
+    color: #fff;
+}
+
+.form{
+    border-radius: 4px;
+    width:40%;
+    border:2px solid gray;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-control input{
+    border: 2px,solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 70%;
+    margin-left: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding:10px;
+    font-size: 14px;
+    font-family: inherit;
+    
+}
+.form-control select{
+    border: 2px,solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 70%;
+    margin-left: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding:10px;
+    font-size: 14px;
+    font-family: inherit;
+    
+}
+.form-control i {
+    position: absolute;
+    top:40px;
+    right: 10px;
+    visibility: hidden;
+}
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.form button{
+    background-color: #8e44ad;
+    border:2px solid #8e44ad;
+    color:#fff;
+    display: block;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 70%;
+    margin-left: 15%;
+    font-size: 16px;
+    border-radius: 4px;
+    font-family: inherit;
+}
+.form-control.success input{
+    border-color: #2ecc71;
+}
+.form-control.error input{
+    border-color: #e74c3c;
+}
+.form-control.success i.fa-check-circle{
+    visibility: visible;
+    color:#2ecc71;
+}
+.form-control.error i.fa-exclamation-circle{
+    visibility: visible;
+    color:#e74c3c;
+}
+.form-control.error small{
+    visibility: visible;
+    color:#e74c3c;
+}

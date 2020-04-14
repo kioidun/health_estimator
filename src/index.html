@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>COVID-19 Health Simulator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/all.min.css'>
+   
+</head>
+<body>
+    <div class ="container">
+        <nav class = "navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#form">Form</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+            <h1>COVID-19 Health Simulator</h1>
+            <p>Build for SDG</p>
+        </section>
+        <section id="form">
+            <h1>Fill in the form</h1>
+            <form class='form' id="form" method="POST" >
+                <div class = "form-control">
+                    <label for="data-population">data-population</label>
+                    <input type="text" id="data-population"  placeholder="data-population" >
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class = "form-control">
+                    <label for="data-time-to-elapse">data-time-to-elapse</label>
+                    <input type="text" id="data-time-to-elapse"  placeholder="data-time-to-elapse" >
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class = "form-control">
+                    <label for="data-reported-cases">data-reported-cases</label>
+                    <input type="text" id="data-reported-cases"  placeholder="data-reported-cases" >
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class = "form-control">
+                    <label for="data-total-hospital-beds">data-total-hospital-beds</label>
+                    <input type="text" id="data-total-hospital-beds" placeholder="data-total-hospital-beds" >
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+                <div class = "form-control">
+                    <label for="data-period-type">data-period-type</label>
+                    <select id="data-period-type" name="data-period-type" ">
+                        <option disabled hidden selected>Select</option>
+                      <option value="days">days</option>
+                      <option value="weeks">weeks</option>
+                      <option value="months">months</option>
+                    </select>
+                </div>
+                <input type="reset" id="button-reset" value="reset">
+                <button id="data-go-submit" >data-go-submit</button>
+            </form>
+        </section>
+    </div>
+    <script type="text/javascript" src='./js//form.js'></script>
+</body>
+</html>
